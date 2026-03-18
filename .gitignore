@@ -5,3 +5,4 @@ __pycache__/
 /scripts/upload.sh
 /.vscode/
 /.claude/
+/.DS_Store/
