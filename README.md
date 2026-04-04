@@ -38,8 +38,6 @@
 ---
 ## Claude Code Skill 使用教程
 
-## Claude Code Skill 使用教程
-
 本仓库包含一个 **Claude Code Skill** (`skill.md`)，可以将 Claude 变身为万智牌规则裁判助手。
 
 ### 安装 Skill
