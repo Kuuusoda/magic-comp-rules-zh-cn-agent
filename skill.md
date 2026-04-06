@@ -295,6 +295,19 @@ curl -s "https://mtgch.com/api/v1/autocomplete/?q=牌名英文&size=1" \
   -H "accept: application/json" | jq -r '.items[0].display_name'
 ```
 
+**⚠️ 重要：必须使用完整准确的牌名**
+
+包括所有标点符号：
+- 撇号（'）：`Jeska's Will` 不是 `Jeska Will`
+- 逗号（,）：`Ulamog, the Infinite Gyre`
+- 定冠词（The）：`The Gitrog Monster` 不是 `Gitrog Monster`
+
+**错误示例**：
+- 查询 `Jeska Will` → 返回 `Will of the Jeskai`（洁斯凯之志）❌
+- 查询 `Jeska's Will` → 返回 `Jeska's Will`（洁丝卡的意志）✅
+
+两张是不同的牌，不完整牌名会导致错误匹配！
+
 ### 翻译示例
 
 **原文**: "Ulalek is a competitive 'six color' midrange commander deck..."
@@ -303,6 +316,37 @@ curl -s "https://mtgch.com/api/v1/autocomplete/?q=牌名英文&size=1" \
 
 
 ---
+
+---
+
+## 赛事规则与裁判方针
+
+### 比赛规则 (MTR)
+
+位于 `mtr/` 目录：
+
+| 章节 | 内容 |
+|------|------|
+| [mtr/chapter_1.md](mtr/chapter_1.md) | 比赛基本要素 |
+| [mtr/chapter_2.md](mtr/chapter_2.md) | 比赛的各项机制 |
+| [mtr/chapter_3.md](mtr/chapter_3.md) | 比赛规则 |
+| [mtr/chapter_4.md](mtr/chapter_4.md) | 沟通交流 |
+| [mtr/chapter_5.md](mtr/chapter_5.md) | 比赛违规 |
+| [mtr/chapter_6-10.md](mtr/chapter_6.md) | 构筑/限制/团队赛规则 |
+
+### 违规处理方针 (IPG)
+
+位于 `ipg/` 目录：
+
+| 章节 | 内容 |
+|------|------|
+| [ipg/chapter_1.md](ipg/chapter_1.md) | 一般原则（处罚定义） |
+| [ipg/chapter_2.md](ipg/chapter_2.md) | 游戏行动失误 |
+| [ipg/chapter_3.md](ipg/chapter_3.md) | 比赛失误 |
+| [ipg/chapter_4.md](ipg/chapter_4.md) | 举止失误 |
+
+**处罚等级**：警告 → 一盘负 → 一局负 → 取消资格
+
 
 ## 参考资源
 
